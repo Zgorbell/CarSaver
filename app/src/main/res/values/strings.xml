@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AproSoft</string>
+    <string name="action_settings">Settings</string>
+    <string name="manufacturer">Manufacturer : </string>
+    <string name="model">Model : </string>
+    <string name="engine">Engine : </string>
+    <string name="engine_capacity">Engine capacity : </string>
+    <string name="body">Body : </string>
+    <string name="transmission">Transmission : </string>
+    <string name="price">Price : </string>
+    <string name="sort">Sort</string>
+    <string name="car_photo">Car photo</string>
+    <string name="filter">Filter</string>
+    <string name="add_photo">Add photo</string>
+    <string name="save">Save</string>
+    <string name="filter_by">Filter by</string>
+    <string name="none">None</string>
+    <string name="no_sort">No sort</string>
+    <string name="sort_by_price_ascending">Price ascending</string>
+    <string name="sort_by_price_descending">Price descending</string>
+    <string name="sort_by">Sort by</string>
+    <string name="edit">Edit</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="dialog_deleteCar_message">Are you sure ?</string>
+</resources>

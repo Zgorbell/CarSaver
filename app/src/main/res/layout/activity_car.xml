@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewCar"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/car_photo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/no_image" />
+
+            <TextView
+                android:id="@+id/textViewEngineCapacityCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/engine_capacity"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextEngineCapacity"
+                app:layout_constraintStart_toStartOf="@+id/textViewEngineCar" />
+
+            <TextView
+                android:id="@+id/textViewEngineCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/engine"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextEngine"
+                app:layout_constraintStart_toStartOf="@+id/textViewBodyCar" />
+
+            <TextView
+                android:id="@+id/textViewBodyCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/body"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextBody"
+                app:layout_constraintStart_toStartOf="@+id/textViewPriceCar" />
+
+            <TextView
+                android:id="@+id/textViewPriceCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/price"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextPrice"
+                app:layout_constraintStart_toStartOf="@+id/textViewModelCar" />
+
+            <TextView
+                android:id="@+id/textViewManufacturerCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/manufacturer"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerManufacturer"
+                app:layout_constraintStart_toStartOf="@+id/imageViewCar" />
+
+            <TextView
+                android:id="@+id/textViewModelCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/model"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextPrice"
+                app:layout_constraintStart_toStartOf="@+id/textViewManufacturerCar" />
+
+            <TextView
+                android:id="@+id/textViewTransmissionCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/transmission"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTransmission"
+                app:layout_constraintStart_toStartOf="@+id/textViewEngineCapacityCar" />
+
+            <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/price"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/spinnerModel"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerModel" />
+
+            <EditText
+                android:id="@+id/editTextBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/body"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/editTextPrice"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPrice" />
+
+            <EditText
+                android:id="@+id/editTextEngine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/engine"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/editTextBody"
+                app:layout_constraintTop_toBottomOf="@+id/editTextBody" />
+
+            <EditText
+                android:id="@+id/editTextEngineCapacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/engine_capacity"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/editTextEngine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEngine" />
+
+            <EditText
+                android:id="@+id/editTextTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/transmission"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/editTextEngineCapacity"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEngineCapacity" />
+
+            <Spinner
+                android:id="@+id/spinnerModel"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/spinnerManufacturer"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerManufacturer" />
+
+            <Spinner
+                android:id="@+id/spinnerManufacturer"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewManufacturerCar"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewCar" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
