@@ -6,6 +6,7 @@ import android.arch.paging.LivePagedListBuilder;
 import android.arch.paging.PagedList;
 import android.arch.paging.PositionalDataSource;
 import android.content.Intent;
+import android.media.tv.TvView;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,6 +16,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 //import android.util.Log;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +37,8 @@ public class MainActivity extends MvpAppCompatActivity implements MainMvpView, C
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int REQUEST_CAR_ACTIVITY = 1;
     private static final int REQUEST_FILTER_ACTIVITY = 2;
+    private static final String RECYCLER_POSITION = "RECYCLER_POSITION";
+    private static final String LAYOUT_MANAGER_STATE = "LAYOUT_MANAGER_STATE";
     @InjectPresenter
     MainPresenter mainPresenter;
     @BindView(R.id.toolbarMain)
@@ -42,7 +46,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainMvpView, C
     @BindView(R.id.fab)
     FloatingActionButton fab;
     @BindView(R.id.recyclerViewCars)
-    RecyclerView recyclerView;
+    StatefulRecyclerView recyclerView;
     private CarAdapter carAdapter;
     private int positionCurrentRecycler;
 
@@ -77,6 +81,18 @@ public class MainActivity extends MvpAppCompatActivity implements MainMvpView, C
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(RECYCLER_POSITION, recyclerView.onSaveInstanceState());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        recyclerView.onRestoreInstanceState(savedInstanceState.getParcelable(RECYCLER_POSITION));
     }
 
     @Override

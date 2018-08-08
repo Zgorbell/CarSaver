@@ -14,9 +14,6 @@ import io.reactivex.Single;
 @Dao
 public abstract class ModelDao {
 
-//    @Query("Select * from model")
-//    public abstract Single<List<Model>> getModels();
-
     @Query("Select * from model where :manufacturerId = model.manufacturer_id")
     public abstract Single<List<Model>> getModels(int manufacturerId);
 

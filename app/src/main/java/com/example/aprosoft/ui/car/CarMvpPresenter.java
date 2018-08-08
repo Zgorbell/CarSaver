@@ -1,6 +1,5 @@
 package com.example.aprosoft.ui.car;
 
-import com.example.aprosoft.data.db.model.Car;
 import com.example.aprosoft.data.db.model.CarTotalInfo;
 
 import java.io.File;

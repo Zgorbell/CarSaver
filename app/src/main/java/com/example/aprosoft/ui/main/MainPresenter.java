@@ -44,15 +44,6 @@ public class MainPresenter extends MvpPresenter<MainMvpView> implements MainMvpP
     }
 
     @Override
-    public void onCarActivityReturn(boolean status, String message) {
-//        Log.e(TAG, "car activity return " + status);
-        if(status) {
-            getViewState().showMessage(message);
-            getViewState().invalidateDataSource();
-        }
-    }
-
-    @Override
     public void onItemClicked(CarTotalInfo carTotalInfo) {
         getViewState().startCarActivity(carTotalInfo.getId());
     }

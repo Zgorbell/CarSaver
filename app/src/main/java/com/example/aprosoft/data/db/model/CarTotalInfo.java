@@ -3,7 +3,6 @@ package com.example.aprosoft.data.db.model;
 import android.arch.persistence.room.ColumnInfo;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 
 public class CarTotalInfo implements Parcelable {
 

@@ -22,18 +22,22 @@
 
             <ImageView
                 android:id="@+id/imageCar"
-                android:layout_width="match_parent"
+                android:layout_width="375dp"
                 android:layout_height="238dp"
-                android:scaleType="centerCrop"
+                android:layout_marginTop="0dp"
                 android:contentDescription="@string/car_photo"
-                app:srcCompat="@drawable/no_image"/>
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/no_image" />
 
             <TextView
                 android:id="@+id/textViewManufacturerCar"
                 android:layout_width="348dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/manufacturer"
                 android:textColor="#000000"
                 android:textSize="16sp"
@@ -43,80 +47,79 @@
 
             <TextView
                 android:id="@+id/textViewModelCar"
-                android:layout_width="166dp"
+                android:layout_width="169dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/model"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/textViewManufacturerCar"
                 app:layout_constraintTop_toBottomOf="@+id/textViewManufacturerCar" />
 
             <TextView
                 android:id="@+id/textViewPrice"
                 android:layout_width="174dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/price"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textViewModelCar"
                 app:layout_constraintTop_toBottomOf="@+id/textViewManufacturerCar" />
 
             <TextView
                 android:id="@+id/textViewEngine"
-                android:layout_width="166dp"
+                android:layout_width="177dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/engine"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/textViewModelCar"
                 app:layout_constraintTop_toBottomOf="@+id/textViewModelCar" />
 
             <TextView
                 android:id="@+id/textViewTransmission"
                 android:layout_width="174dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="0dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/transmission"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textViewEngine"
+                app:layout_constraintStart_toStartOf="@+id/textViewPrice"
                 app:layout_constraintTop_toBottomOf="@+id/textViewPrice" />
 
             <TextView
                 android:id="@+id/textViewEngineCapacity"
-                android:layout_width="166dp"
+                android:layout_width="176dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/engine_capacity"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/textViewEngine"
                 app:layout_constraintTop_toBottomOf="@+id/textViewEngine" />
 
             <TextView
                 android:id="@+id/textViewBody"
                 android:layout_width="174dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="0dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/body"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textViewEngineCapacity"
+                app:layout_constraintStart_toStartOf="@+id/textViewTransmission"
                 app:layout_constraintTop_toBottomOf="@+id/textViewTransmission" />
 
             <android.support.constraint.Guideline

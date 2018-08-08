@@ -5,7 +5,6 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v4.view.ViewCompat;
 
 import com.example.aprosoft.App;
 import com.example.aprosoft.data.db.AppDatabase;
@@ -41,7 +40,6 @@ public class StorageModule {
                         })
                                 .subscribeOn(Schedulers.io())
                                 .subscribe();
-                        ;
                     }
                 })
                 .build();

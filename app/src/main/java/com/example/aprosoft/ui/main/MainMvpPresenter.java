@@ -4,8 +4,6 @@ import android.arch.paging.PositionalDataSource;
 
 import com.example.aprosoft.data.db.model.CarTotalInfo;
 
-import java.util.Map;
-
 interface MainMvpPresenter {
 
     void onFilterClicked();
@@ -15,8 +13,6 @@ interface MainMvpPresenter {
     void onFabClicked();
 
     void onFilterReturn(boolean status);
-
-    void onCarActivityReturn(boolean status, String message);
 
     void onLoadInitial(int start, int limit,
                        PositionalDataSource.LoadInitialCallback<CarTotalInfo> callback);

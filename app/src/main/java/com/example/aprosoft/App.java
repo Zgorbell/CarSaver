@@ -55,7 +55,7 @@ public class App extends Application {
                 .subscribe(new DisposableSingleObserver<List<Manufacturer>>() {
                     @Override
                     public void onSuccess(List<Manufacturer> manufacturers) {
-
+                        Log.d(TAG, " " + manufacturers.size());
                     }
 
                     @Override

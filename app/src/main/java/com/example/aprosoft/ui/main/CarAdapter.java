@@ -2,8 +2,6 @@ package com.example.aprosoft.ui.main;
 
 import android.arch.paging.PagedListAdapter;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
@@ -16,12 +14,9 @@ import android.widget.TextView;
 import com.example.aprosoft.App;
 import com.example.aprosoft.R;
 import com.example.aprosoft.data.db.model.CarTotalInfo;
-import com.example.aprosoft.ui.car.BitmapWorker;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.io.IOException;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -49,15 +44,6 @@ public class CarAdapter extends PagedListAdapter<CarTotalInfo, CarAdapter.CarVie
             String photoPath = carTotalInfo.getPhotoPath();
             if (photoPath != null) {
                 Picasso.get().load(new File(photoPath)).fit().centerCrop().into(h.carImageView);
-//                try {
-//                    BitmapFactory.Options opts = new BitmapFactory.Options();
-//                    opts.inSampleSize = 16;
-//                    Bitmap bitmap = BitmapFactory.decodeFile(photoPath, opts);
-//                    bitmap = BitmapWorker.rotateImage(bitmap, photoPath);
-//                    h.carImageView.setImageBitmap(bitmap);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
             }else Picasso.get().load(R.drawable.no_image).fit().centerCrop().into(h.carImageView);
 
             Context context = App.getContext();
